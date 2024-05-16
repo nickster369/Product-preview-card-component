@@ -15,14 +15,18 @@ body {
 }
 
 .bodyContainer {
-  flex-flow: column;
   border-radius: 10px;
   width: 343px;
   height: auto;
   background-color: white;
-
+  display: flex;
+  flex-flow: column;
 }
-
+#top{
+  flex-flow: wrap;
+  height: 225px;
+  width: 100%;
+}
 .imageContainer {
   background-image: url("./images/image-product-mobile.jpg");
   background-size: cover;
@@ -112,7 +116,8 @@ button span {
 
 @media screen and(min-width: 1080px) {
   .bodyContainer {
-    flex-direction: row;
+    flex-flow: row;
     border-radius: 32px;
   }
+
 }
