@@ -1,7 +1,7 @@
-html, body, .bodyContainer {
+html, body, .bodyContainer, h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
-  font-family: arial, sans-serif;
+  /*font-family: Montserrat, Fraunces, sans-serif;*/
 }
 
 body {
@@ -10,27 +10,17 @@ body {
   display: flex;
   align-items: center;
   background-color: #F3EAE3;
+
+
 }
 
 .bodyContainer {
-  border-radius: 20px;
-  width: 320px;
+  flex-flow: column;
+  border-radius: 10px;
+  width: 343px;
   height: auto;
-  display: flex;
-  flex-flow: column wrap;
   background-color: white;
-}
 
-top {
-
-}
-
-#bottom {
-
-}
-
-.bottomContainer {
-  padding: 20px 20px;
 }
 
 .imageContainer {
@@ -38,17 +28,91 @@ top {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 225px;
   width: 100%;
+  flex-shrink: 0;
 }
 
-bottom {
+.bottomContainer {
+  padding: 0 20px 20px;
+}
 
+h1 {
+  padding: 10px 0;
+  font-family: Montserrat, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 5px;
+  color: #6C7289;
+}
+
+h4 {
+  padding: 0 0 10px 0;
+  font-family: Fraunces, serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  color: #1C232B;
+}
+
+#middleText {
+  font-family: Montserrat, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px; /* 164.286% */
+  color: #6C7289;
+}
+
+p {
+  margin-top: 24px;
+  font-family: Fraunces, serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 100% */
+  display: flex;
+  color: #3D8168;
+
+  margin-bottom: 20px;
+}
+
+p span {
+  font-family: Montserrat, serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px; /* 176.923% */
+  text-decoration-line: line-through;
+  padding: 5px 0 4px 19px;
+  color: #6C7289;
+}
+
+button {
+  border-radius: 8px;
+  width: 295px;
+  height: 48px;
+  flex-shrink: 0;
+  background-color: #3D8168;
+
+}
+
+button span {
+  /* Button Text */
+  font-family: Montserrat, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #FFF;
 }
 
 @media screen and(min-width: 1080px) {
-  body {
+  .bodyContainer {
     flex-direction: row;
-
+    border-radius: 32px;
   }
 }
