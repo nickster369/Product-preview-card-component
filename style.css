@@ -1,7 +1,7 @@
 html, body, .bodyContainer {
   margin: 0;
   padding: 0;
-  /*font-family: Montserrat, Fraunces, sans-serif;*/
+
 }
 
 body {
@@ -10,35 +10,111 @@ body {
   display: flex;
   align-items: center;
   background-color: #F3EAE3;
-
-
 }
 
 .bodyContainer {
-  display: flex;
-  flex-direction: row;
-  width: auto;
   border-radius: 10px;
   background-color: white;
-
+  width: 600px;
+  height: 450px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 
+img {
+  height: 100%;
+}
 
-.imageContainer {
-  background-image: url("./images/image-product-mobile.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 500px;
-  width: 300px;
+
+.bottomContainer {
+  padding: 20px 0;
+  width: 237px;
+  height: auto;
+  margin: 0 auto;
+  text-align: left;
+}
+
+h1 {
+  font-family: var(--font-montserrat), serif;
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: var(--aurometal);
 
 }
 
-@media only screen and (max-width: 800px) {
+h2 {
+  font-family: var(--font-fraunces), serif;
+  font-size: 32px;
+  color: var(--gunmetal);
+  font-weight: 700;
+}
+
+p {
+  font-family: var(--font-montserrat), serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 23px;
+  color: var(--aurometal);
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+#mainPrice {
+  font-family: var(--font-fraunces), serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  color: var(--deepAquamarine);
+
+}
+
+#beforePrice {
+  font-family: var(--font-montserrat), serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 23px;
+  color: var(--aurometal);
+  text-decoration-line: line-through;
+
+}
+
+button {
+  width: 236px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: var(--deepAquamarine);
+  flex-shrink: 0;
+
+
+}
+
+#buttonText {
+  font-family: var(--font-montserrat), serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--pureWhite);
+
+}
+
+:root {
+  --aurometal: #6C7289;
+  --creamBG: #F2EAE2;
+  --deepAquamarine: #3D8168;
+  --gunmetal: #1C232B;
+  --pureWhite: #FFFFFF;
+  --font-montserrat: Montserrat;
+  --font-fraunces: Fraunces;
+}
+
+@media screen and (min-width: 768px) {
   .bodyContainer {
-    flex-direction: column;
-    width: 500px;
-
+    flex-direction: row;
   }
+
+
+
+
 }
