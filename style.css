@@ -12,24 +12,27 @@ body {
   background-color: #F3EAE3;
 }
 
+.topContainer {
+  background-image: url("./images/image-product-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  width: 100%;
+}
+
 .bodyContainer {
   border-radius: 10px;
-  background-color: white;
+  background-color: var(--pureWhite);
   width: 600px;
   height: 450px;
   flex-shrink: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
-
-
-img {
-  height: 100%;
-}
-
 
 .bottomContainer {
-  padding: 20px 0;
+  padding: 20px 20px;
   width: 237px;
   height: auto;
   margin: 0 auto;
@@ -87,8 +90,10 @@ button {
   border-radius: 8px;
   background-color: var(--deepAquamarine);
   flex-shrink: 0;
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid var(--pureWhite);
 }
 
 #buttonText {
@@ -96,25 +101,48 @@ button {
   font-size: 14px;
   font-weight: 700;
   color: var(--pureWhite);
+}
 
+svg {
+  width: 14px;
+  height: 16px;
+  padding-right: 5px;
+}
+
+button:hover {
+  background-color: var(--deepAquamarineHover);
 }
 
 :root {
   --aurometal: #6C7289;
   --creamBG: #F2EAE2;
   --deepAquamarine: #3D8168;
+  --deepAquamarineHover: #1A4032;
   --gunmetal: #1C232B;
   --pureWhite: #FFFFFF;
   --font-montserrat: Montserrat;
   --font-fraunces: Fraunces;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .bodyContainer {
-    flex-direction: row;
+    flex-direction: column;
+    width: 343px;
+    height: 611px;
+
   }
 
+  .topContainer {
+    background-image: url("./images/image-product-mobile.jpg");
+    height: 100%;
+  }
 
+  .bottomContainer {
+    padding: 20px 20px;
+    width: 295px;
+  }
 
-
+  button {
+    width: 295px;
+  }
 }
